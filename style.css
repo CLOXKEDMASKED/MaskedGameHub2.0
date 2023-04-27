@@ -69,7 +69,7 @@ button {
   width: 18.75em;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 80%;
+  top: 75%;
   left: 50%;
   box-shadow: 0 1.25em 2.18em rgba(0, 0, 0, 0.3);
   overflow: hidden;
