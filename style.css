@@ -43,7 +43,7 @@ div:before{
     }
 }
 div:after{
-    content: "RAINBOW";
+    content: "COMING SOON";
     position: absolute;
     background-color: #1c1b29;
     height: 93%;
