@@ -59,3 +59,58 @@ div:after{
     place-items: center;
 
 }
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #151320;
+}
+button {
+  height: 7.5em;
+  width: 18.75em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 1.25em 2.18em rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0.31em;
+}
+button:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(
+    to right,
+    #fd004c 2.62em,
+    #fe9000 5.25em,
+    #fff020 7.87em,
+    #3edf4b 10.5em,
+    #3363ff 15.75em,
+    #fd004c 18.75em
+  );
+  background-size: 125em;
+}
+button:after {
+  content: "HOVER ME";
+  position: absolute;
+  background-color: #1c1b29;
+  height: 85%;
+  width: 93%;
+  top: 7.5%;
+  left: 3.5%;
+  border-radius: 0.2em;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.3em;
+  display: grid;
+  place-items: center;
+}
+button:hover:before {
+  background-position: -106.25em 0;
+  transition: 10s linear;
+}
