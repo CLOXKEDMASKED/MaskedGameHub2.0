@@ -16,7 +16,7 @@ div{
     top: 30%;
     left: 50%;
     border-radius: 5px;
-    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    box-shadow: 0 25px 35px rgba(0,0,0,0.3);
     overflow: hidden;
 }
 div:before{
