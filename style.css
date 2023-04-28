@@ -33,7 +33,7 @@ div:before{
         #b102b7,
         #fd004c
     );
-    left: -25%;
+    left: -30%;
     top: -25%;
     animation: spin 1.5s infinite linear;
 }
