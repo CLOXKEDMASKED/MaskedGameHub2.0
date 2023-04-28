@@ -16,7 +16,7 @@ div{
     top: 30%;
     left: 50%;
     border-radius: 5px;
-    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 35px rgba(1,0,0,0.3);
     overflow: hidden;
 }
 div:before{
@@ -33,8 +33,8 @@ div:before{
         #b102b7,
         #fd004c
     );
-    left: -30%;
-    top: -30%;
+    left: -25%;
+    top: -25%;
     animation: spin 1.5s infinite linear;
 }
 @keyframes spin{
