@@ -12,7 +12,7 @@ div{
     height: 250px;
     width: 500px;
     position: absolute;
-    transform: translate(-60%,-60%);
+    transform: translate(-50%,-50%);
     top: 30%;
     left: 50%;
     border-radius: 5px;
@@ -43,7 +43,7 @@ div:before{
     }
 }
 div:after{
-    content: "COMING SOON";
+    content: "Masked's Game Hub 2.0";
     position: absolute;
     background-color: #1c1b29;
     height: 93%;
