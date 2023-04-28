@@ -95,7 +95,7 @@ button:before {
   background-size: 125em;
 }
 button:after {
-  content: "PLAY";
+  content: "GAMES";
   position: absolute;
   background-color: #1c1b29;
   height: 85%;
