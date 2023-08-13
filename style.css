@@ -1,32 +1,117 @@
-li::before {
-   content: "";
-   position: absolute;
-   height: 33.33%;
-   width: 0;
-   background-color: #0D7CFF;
-   right: 0;
-   z-index: 0;
-   top: 33.33%;
-   transition: all 0.5s;
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-li::after {
-   content: "";
-   position: absolute;
-   height: 33.33%;
-   width: 0;
-   background-color: #0D7CFF;
-   left: 0;
-   z-index: 0;
-   bottom: 0;
-   transition: all 0.5s;
+body{
+    background-color: #151320;
 }
-a::before {
-   position: absolute;
-   content: "";
-   height: 33.33%;
-   width: 0;
-   background-color: #0D7CFF;
-   bottom: 66.66%;
-   left: 0;
-   transition: all 0.5s;
+div{
+    height: 250px;
+    width: 500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 30%;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+div:before{
+    content: "";
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    background: conic-gradient(
+        #fd004c,
+        #fe9000,
+        #fff020,
+        #3edf4b,
+        #3363ff,
+        #b102b7,
+        #fd004c
+    );
+    left: -25%;
+    top: -25%;
+    animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+div:after{
+    content: "Masked's Game Hub 2.0";
+    position: absolute;
+    background-color: #1c1b29;
+    height: 93%;
+    width: 93%;
+    top: 3.5%;
+    left: 3.5%;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 6px;
+    display: grid;
+    place-items: center;
+
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #151320;
+}
+button {
+  height: 4.5em;
+  width: 18.75em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  box-shadow: 0 1.25em 2.18em rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0.31em;
+}
+button:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(
+    to right,
+    #fd004c 2.62em,
+    #fe9000 5.25em,
+    #fff020 7.87em,
+    #3edf4b 10.5em,
+    #3363ff 15.75em,
+    #fd004c 18.75em
+  );
+  background-size: 125em;
+}
+button:after {
+  content: "PLAY NOW";
+  position: absolute;
+  background-color: #1c1b29;
+  height: 85%;
+  width: 93%;
+  top: 8%;
+  left: 3.5%;
+  border-radius: 0.2em;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.3em;
+  display: grid;
+  place-items: center;
+}
+button:hover:before {
+  background-position: -106.25em 0;
+  transition: 10s linear;
 }
