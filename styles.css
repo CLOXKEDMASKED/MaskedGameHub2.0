@@ -41,7 +41,7 @@ a:after {
 }
 a:before {
   right: 0;
-  top: -10px;
+  top: 10px;
 }
 a:hover {
   color: #ffffff;
