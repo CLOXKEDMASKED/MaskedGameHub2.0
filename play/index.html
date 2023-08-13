@@ -1,279 +1,651 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <title>My Drive - Google Drive</title>
-      <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
-        <meta property="og:title" content="education is important and start today!" />
-        <meta property="og:description" content="games" />
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://kit.fontawesome.com/d0c5025972.js" crossorigin="anonymous"></script>
-        <meta name="theme-color" content="var(--bgColor)">
-    </head>
-    <body>
-            <!--Page Content Below-->
-        <img id="userPhoto" class="animated rubberBand fast" src="icons/logo.png" alt="Your Name's Photo">
-        <h1 class="animated jello game_title">Maskeds Game Hub (NEW WEBSTIE COMING SOON SCROLL TO THE BOTTOM!)</h1>
-        <div id="links" class="animated fadeInLeft delay-1s games">
-            <div class="game_title"><input placeholder="Search" id="search" class="search" onkeyup="search_it()" type="search"><select id="tags" class="button" onclick="search_it()"><option value="all">All</option><option value="pop">Popular</option><option value="two">Two Player</option><option value="stream">Streaming</option><option value="bad">Bad Games</option></select></div>
-            <h2 class="animated jello game_title">All Games:</h2>
-            <a id="Back To Home" class="link" href="./play/home-page/" target="_blank"><span class="bar"></span><img src="./icons/home.webp" alt="Back To Home"><b>Back To Home</b></a>
-            <a id="1 (2048 game)" class="link" href="./play/1/" target="_blank"><span class="bar"></span><img src="./icons/one.webp" alt="1 (2048 game)"><b>1 (2048 game)</b></a>
-            <a id="100 Player Pong" class="glink" href="./play/100-player-pong/" target="_blank"><span class="bar"></span><img src="./icons/100pong.webp"><b>100 Player Pong</b></a>
-            <a id="10 Minutes Till Dawn" class="link" href="./play/10-minutes-till-dawn/" target="_blank"><span class="bar"></span><img src="./icons/10m.webp"><b>10 Minutes Till Dawn</b></a>
-            <a id="1v1.lol" class="link pop" href="./play/1v1/" target="_blank"><span class="bar"></span><img src="./icons/1v1.webp"><b>1v1.lol</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span><span class="badge"></a>
-            <a id="1v1.space" class="link" href="./play/1v1space/" target="_blank"><span class="bar"></span><img src="./icons/1v1space.webp"><b>1v1.space</b></a>
-            <a id="2048" class="link" href="./play/2048/" target="_blank"><span class="bar"></span><img src="./icons/2048.webp"><b>2048</b></a>
-            <a id="2048 Multitask" class="link" href="./play/2048-multitask/" target="_blank"><span class="bar"></span><img src="./icons/multit.webp"><b>2048 Multitask</b></a>
-            <a id="9007199254740992" class="link" href="./play/9007199254740992/" target="_blank"><span class="bar"></span><img src="./icons/900.webp"><b>9007199254740992 (2048 game)</b></a>
-            <a id="Achievement Unlocked" class="link" href="./play/achievementunlocked/" target="_blank"><span class="bar"></span><img src="./icons/ache.webp"><b>Achievement Unlocked</b></a>
-            <a id="A Dark Room" class="link" href="./play/adarkroom/" target="_blank"><span class="bar"></span><img src="./icons/adarkroom.webp"><b>A Dark Room</b></a>
-            <a id="Ages of Conflict" class="link" href="./play/ages-of-conflict/" target="_blank"><span class="bar"></span><img src="./icons/ages-of-conflict.webp"><b>Ages of Conflict</b></a>
-            <a id="Alien Hominid" class="link" href="./play/alienhominid/" target="_blank"><span class="bar"></span><img src="./icons/alienhominid.webp"><b>Alien Hominid</b></a>
-            <a id="Amidst the Clouds" class="link" href="./play/amidst-the-clouds/" target="_blank"><span class="bar"></span><img src="./icons/amidst-the-clouds.webp"><b>Amidst the Clouds</b></a>
-            <a id="Avalanche" class="link" href="./play/avalanche/" target="_blank"><span class="bar"></span><img src="./icons/avalanche.webp"><b>Avalanche</b></a>
-            <a id="Backrooms" class="link" href="./play/backrooms/" target="_blank"><span class="bar"></span><img src="./icons/backrooms.webp"><b>Backrooms</b></a>
-            <a id="Bad Ice Cream" class="link" href="./play/bad-ice-cream/" target="_blank"><span class="bar"></span><img src="./icons/bad-ice-cream.webp"><b>Bad Ice Cream</b></a>
-            <a id="Bad Ice Cream 2" class="link" href="./play/bad-ice-cream-2/" target="_blank"><span class="bar"></span><img src="./icons/bad-ice-cream-2.webp"><b>Bad Ice Cream 2</b></a>
-            <a id="Bad Ice Cream 3" class="link" href="./play/bad-ice-cream-3/" target="_blank"><span class="bar"></span><img src="./icons/bad-ice-cream-3.webp"><b>Bad Ice Cream 3</b></a>
-            <a id="Baldi's Basics" class="link" href="./play/baldis-basics/" target="_blank"><span class="bar"></span><img src="./icons/baldis-basics.webp"><b>Baldi's Basics</b></a>
-            <a id="Ball Hop" class="link" href="./play/ball-hop/" target="_blank"><span class="bar"></span><img src="./icons/ballhop.webp"><b>Ball Hop</b></a>
-            <a id="Ballistic Chickens" class="link" href="./play/ballistic-chickens/" target="_blank"><span class="bar"></span><img src="./icons/ballistic-chickens.webp"><b>Ballistic Chickens</b></a>
-            <a id="Basketball Stars" class="link" href="./play/basketball-stars/" target="_blank"><span class="bar"></span><img src="./icons/BAS.webp"><b>Basketball Stars</b></a>
-            <a id="Big Tower Tiny Square" class="link" href="./play/big-tower-tiny-square/" target="_blank"><span class="bar"></span><img src="./icons/btts.webp"><b>Big Tower Tiny Square</b></a>
-            <a id="Biters.io" class="link" href="./play/biters-io/" target="_blank"><span class="bar"></span><img src="./icons/biters.webp"><b>Biters.io</b></a>
-            <a id="Bitlife BitLife" class="link" href="./play/bitlife/" target="_blank"><span class="bar"></span><img src="./icons/bitlife.webp"><b>Bitlife</b></a>
-            <a id="Blocky Tower" class="link" href="./play/blocky-tower/" target="_blank"><span class="bar"></span><img src="./icons/blocky.webp"><b>Blocky Tower</b></a>
-            <a id="Bloons TD " class="link" href="./play/bloonstd/" target="_blank"><span class="bar"></span><img src="./icons/bloonstd.webp"><b>Bloons TD</b></a>
-            <a id="Bloons TD 2" class="link" href="./play/bloonstd2/" target="_blank"><span class="bar"></span><img src="./icons/bloonstd2.webp"><b>Bloons TD 2</b></a>
-            <a id="Bloons TD 4" class="link" href="./play/bloonstd4/" target="_blank"><span class="bar"></span><img src="./icons/bloonstd4.webp"><b>Bloons TD 4</b></a>
-            <a id="Bloxorz" class="link" href="./play/bloxorz/" target="_blank"><span class="bar"></span><img src="./icons/bloxorz.webp"><b>Bloxorz</b></a>
-            <a id="Bouncy Basketball<" class="link" href="./play/bouncybasketball/" target="_blank"><span class="bar"></span><img src="./icons/basketball.webp"><b>Bouncy Basketball</b></a>
-            <a id="Boxing Physics" class="link two" href="./play/boxing-physics/" target="_blank"><span class="bar"></span><img src="./icons/box.webp"><b>Boxing Physics</b><span class="badge"><i class="fa-solid fa-user"></i> 2 Player</span></a>
-            <a id="Breaklock" class="link" href="./play/breaklock/" target="_blank"><span class="bar"></span><img src="./icons/breaklock.webp"><b>Breaklock</b></a>
-            <a id="Breakout" class="link" href="./play/breakout/" target="_blank"><span class="bar"></span><img src="./icons/breakout.webp"><b>Breakout</b></a>
-            <a id="Chrome Dino" class="link" href="./play/chrome-dino/" target="_blank"><span class="bar"></span><img src="./icons/chrom.webp"><b>Chrome Dino</b></a>
-            <a id="Circlo" class="link" href="./play/circlo/" target="_blank"><span class="bar"></span><img src="./icons/circlo.webp"><b>Circlo</b></a>
-            <a id="Cluster Rush" class="link" href="./play/cluster-rush/" target="_blank"><span class="bar"></span><img src="./icons/cluster.webp"><b>Cluster Rush</b></a>
-            <a id="Connect 3" class="link" href="./play/connect3/" target="_blank"><span class="bar"></span><img src="./icons/con3.webp"><b>Connect 3</b></a>
-            <a id="Cookie Clicker" class="link" href="./play/cookie/" target="_blank"><span class="bar"></span><img src="./icons/cookie.webp"><b>Cookie Clicker</b></a>
-            <a id="Core Ball" class="link" href="./play/core-ball/" target="_blank"><span class="bar"></span><img src="./icons/coreball.webp"><b>Core Ball</b></a>
-            <a id="Crossyroad" class="link pop" href="./play/crossyroad/" target="_blank"><span class="bar"></span><img src="./icons/crossyroad.webp"><b>Crossyroad</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span></a>
-            <a id="CSGO-Clicker" class="link" href="./play/csgo-clicker/" target="_blank"><span class="bar"></span><img src="./icons/CSGO.webp"><b>CSGO-Clicker</b></a>
-            <a id="Cupcakes (2048 game)" class="link pop" href="./play/cupcakes/" target="_blank"><span class="bar"></span><img src="./icons/cupcakes.webp"><b>Cupcakes (2048 game)</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span></a>
-            <a id="Cut The Rope" class="link" href="./play/cuttherope/" target="_blank"><span class="bar"></span><img src="./icons/ctr.webp"><b>Cut The Rope</b></a>
-            <a id="Cyber City Driver" class="link two" href="./play/cyber-city-driver/" target="_blank"><span class="bar"></span><img src="./icons/cyber.webp"><b>Cyber City Driver</b><span class="badge"><i class="fa-solid fa-user"></i> 2 Player</span></a>
-            <a id="Disc US" class="link two" href="./play/discus/" target="_blank"><span class="bar"></span><img src="./icons/sus.webp"><b>Disc US</b><span class="badge"><i class="fa-solid fa-user"></i> 2 Player</span></a>
-            <a id="Doge miner" class="link" href="./play/dogeminer/" target="_blank"><span class="bar"></span><img src="./icons/Dogecoin.webp"><b>Doge miner</b></a>
-            <a id="Doodle Jump" class="link" href="./play/doodlejump/" target="_blank"><span class="bar"></span><img src="./icons/doodle.webp"><b>Doodle Jump</b></a>
-            <a id="Drift City" class="link" href="./play/drift-city/" target="_blank"><span class="bar"></span><img src="./icons/driftc.webp"><b>Drift City</b></a>
-            <a id="DriftKing.io" class="link" href="./play/driftking/" target="_blank"><span class="bar"></span><img src="./icons/driftking.webp"><b>DriftKing.io</b></a>
-            <a id="Ducklife 1" class="link" href="./play/ducklife1/" target="_blank"><span class="bar"></span><img src="./icons/ducklife.webp"><b>Ducklife 1</b></a>
-            <a id="Ducklife 2" class="link" href="./play/ducklife2/" target="_blank"><span class="bar"></span><img src="./icons/ducklife2.webp"><b>Ducklife 2</b></a>
-            <a id="Ducklife 3" class="link" href="./play/ducklife3/" target="_blank"><span class="bar"></span><img src="./icons/ducklife3.webp"><b>Ducklife 3</b></a>
-            <a id="Ducklife 4" class="link" href="./play/ducklife4/" target="_blank"><span class="bar"></span><img src="./icons/ducklife4.webp"><b>Ducklife 4</b></a>
-            <a id="Dune" class="link" href="./play/dune/" target="_blank"><span class="bar"></span><img src="./icons/dune.webp"><b>Dune</b></a>
-            <a id="Dunkers Fight" class="link two" href="./play/dunkers-fight/" target="_blank"><span class="bar"></span><img src="./icons/dunk.webp"><b>Dunkers Fight</b><span class="badge"><i class="fa-solid fa-user"></i> 2 Player</span></a>
-            <a id="Eat.io" class="link" href="./play/eatio/" target="_blank"><span class="bar"></span><img src="./icons/eatio.webp"><b>Eat.io</b></a>
-            <a id="Edge Surf" class="link" href="./play/edge-surf/" target="_blank"><span class="bar"></span><img src="./icons/edge-surf.webp"><b>Edge Surf</b></a>
-            <a id="Edge Not Found" class="link" href="./play/edgenotfound/" target="_blank"><span class="bar"></span><img src="./icons/edgenotfound.webp"><b>Edge Not Found</b></a>
-            <a id="Eel Slap" class="link" href="./play/eel-slap/" target="_blank"><span class="bar"></span><img src="./icons/eel-slap.webp"><b>Eel Slap</b></a>
-            <a id="Eggy Car" class="link" href="./play/eggy-car/" target="_blank"><span class="bar"></span><img src="./icons/eggy-car.webp"><b>Eggy Car</b></a>
-            <a id="Elastic Man" class="link" href="./play/elasticman/" target="_blank"><span class="bar"></span><img src="./icons/elasticman.webp"><b>Elastic Man</b></a>
-            <a id="Endless War 3" class="link" href="./play/endlesswar3/" target="_blank"><span class="bar"></span><img src="./icons/endlesswar3.webp"><b>Endless War 3</b></a>
-            <a id="Escaping The Prison" class="link" href="./play/escapingtheprison/" target="_blank"><span class="bar"></span><img src="./icons/excapingtheprison.webp"><b>Escaping The Prison</b></a>
-            <a id="Evil Glitch" class="link" href="./play/evil-glitch/" target="_blank"><span class="bar"></span><img src="./icons/evil-glitch.webp"><b>Evil Glitch</b></a>
-            <a id="Evolution" class="link" href="./play/evolution/" target="_blank"><span class="bar"></span><img src="./icons/evolution.webp"><b>Evolution</b></a>
-            <a id="Exo" class="link" href="./play/exo/" target="_blank"><span class="bar"></span><img src="./icons/exo.webp"><b>Exo</b></a>
-            <a id="Fall Boys" class="link two" href="./play/fallboys/" target="_blank"><span class="bar"></span><img src="./icons/fall-boys.webp"><b>Fall Boys</b><span class="badge"><i class="fa-solid fa-user"></i> 2 Player</span></a>
-            <a id="Ferge" class="link two" href="./play/ferge/" target="_blank"><span class="bar"></span><img src="./icons/ferge.webp"><b>Ferge.io</b><span class="badge"><i class="fa-solid fa-user"></i> 2 Player</span></a>
-            <a id="Flappy Bird" class="link" href="./play/flappy/" target="_blank"><span class="bar"></span><img src="./icons/flappy.webp"><b>Flappy Bird</b></a>
-            <a id="FlipHero.io" class="link" href="./play/fliphero/" target="_blank"><span class="bar"></span><img src="./icons/fliphero.webp"><b>FlipHero.io</b></a>
-            <a id="FNAF 1 (NOT WORKING)" class="link" href="./play/fnaf/" target="_blank"><span class="bar"></span><img src="./icons/fnaf.webp"><b>FNAF 1 (NOT WORKING)</b></a>
-            <a id="FNAF 2 (NOT WORKING)" class="link" href="./play/fnaf2/" target="_blank"><span class="bar"></span><img src="./icons/fnaf.webp"><b>FNAF 2 (NOT WORKING)</b></a>
-            <a id="FNAF 3 (NOT WORKING)" class="link" href="./play/fnaf3/" target="_blank"><span class="bar"></span><img src="./icons/fnaf.webp"><b>FNAF 3 (NOT WORKING)</b></a>
-            <a id="FNAF 4" class="link" href="./play/fnaf4/" target="_blank"><span class="bar"></span><img src="./icons/fnaf.webp"><b>FNAF 4</b></a>
-            <a id="Friday Night Funkin" class="link" href="./play/fridaynightfunkin/" target="_blank"><span class="bar"></span><img src="./icons/fridaynightfunkin.webp"><b>Friday Night Funkin</b></a>
-            <a id="Fruit Ninja" class="link" href="./play/fruitninja/" target="_blank"><span class="bar"></span><img src="./icons/fruitninja.webp"><b>Fruit Ninja</b></a>
-            <a id="Funny Shooter 2" class="link" href="./play/funnyshooter/" target="_blank"><span class="bar"></span><img src="./icons/funnyshooter.webp"><b>Funny Shooter</b></a>
-            <a id="GeForce NOW" class="link" href="./play/GeForce NOW/" target="_blank"><span class="bar"></span><img src="./icons/geforce.webp"><b>GeForce NOW</b></a>
-            <a id="Geometrydash" class="link" href="./play/geometrydash/" target="_blank"><span class="bar"></span><img src="./icons/geodash.webp"><b>Geometrydash</b></a>
-            <a id="Good Night" class="link" href="./play/goodnight/" target="_blank"><span class="bar"></span><img src="./icons/gn.webp"><b>Good Night</b></a>
-            <a id="Hextris" class="link" href="./play/hextris/" target="_blank"><span class="bar"></span><img src="./icons/hextrt.webp"><b>Hextris</b></a>
-            <a id="Idle Breakout" class="link" href="./play/idle-breakout/" target="_blank"><span class="bar"></span><img src="./icons/idlebreakout.webp"><b>Idle Breakout</b></a>
-            <a id="Idle Shark" class="link" href="./play/idle-shark/" target="_blank"><span class="bar"></span><img src="./icons/sharkgame.webp"><b>Idle Shark</b></a>
-            <a id="Impossible Quiz" class="link" href="./play/impossiblequiz/" target="_blank"><span class="bar"></span><img src="./icons/impossiblequiz.webp"><b>Impossible Quiz</b></a>
-            <a id="Interactive Buddy" class="link" href="./play/interactivebuddy/" target="_blank"><span class="bar"></span><img src="./icons/interactivebuddy.webp"><b>Interactive Buddy</b></a>
-            <a id="Jetpack Joyride" class="link" href="./play/jetpack-joyride/" target="_blank"><span class="bar"></span><img src="./icons/jetpack-joyride.webp"><b>Jetpack Joyride</b></a>
-            <a id="Just Fall" class="link" href="./play/just-fall/" target="_blank"><span class="bar"></span><img src="./icons/just-fall.webp"><b>Just Fall</b></a>
-            <a id="Just One Boss" class="link" href="./play/just-one-boss/" target="_blank"><span class="bar"></span><img src="./icons/just-one-boss.webp"><b>Just One Boss</b></a>
-            <a id="Kitchen Gun Game" class="link" href="./play/kitchen-gun-game/" target="_blank"><span class="bar"></span><img src="./icons/kitchen-gun-game.webp"><b>Kitchen Gun Game</b></a>
-            <a id="Kitten Cannon" class="link" href="./play/kittencannon/" target="_blank"><span class="bar"></span><img src="./icons/kittencannon.webp"><b>Kitten Cannon</b></a>
-            <a id="Kirka.io" class="link" href="./play/kirka.io/" target="_blank"><span class="bar"></span><img src="./icons/kirkaio.webp"><b>Kirka.io</b></a>
-            <a id="Krunker" class="link" href="./play/krunker/" target="_blank"><span class="bar"></span><img src="./icons/krunker.webp"><b>Krunker</b></a>
-            <a id="learntofly" class="link" href="./play/learntofly/" target="_blank"><span class="bar"></span><img src="./icons/learntofly.webp"><b>learntofly</b></a>
-            <a id="learntofly2" class="link" href="./play/learntofly2/" target="_blank"><span class="bar"></span><img src="./icons/learntofly2.webp"><b>learntofly 2</b></a>
-            <a id="Mario" class="link" href="./play/mario/" target="_blank"><span class="bar"></span><img src="./icons/mario.webp"><b>Mario</b></a>
-            <a id="Minecraft" class="link pop" href="./play/minecraft/" target="_blank"><span class="bar"></span><img src="./icons/minecraft.webp"><b>Minecraft</b><span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span></a>
-            <a id="Minecraft JS" class="link" href="./play/minecraft-js/" target="_blank"><span class="bar"></span><img src="./icons/minecraft.webp"><b>Minecraft JS</b></a>
-            <a id="mk.js" class="link" href="./play/mk.js/" target="_blank"><span class="bar"></span><img src="./icons/mkjs.webp"><b>mk.js</b></a>
-            <a id="Moon Animation" class="link" href="./play/moonanim/" target="_blank"><span class="bar"></span><img src="./icons/moon.webp"><b>Moon Animation</b></a>
-            <a id="motox3m" class="link" href="./play/motox3m/" target="_blank"><span class="bar"></span><img src="./icons/motox3m.webp"><b>Motox3m</b></a>
-            <a id="motox3m Pool Party" class="link" href="./play/motox3m-pool/" target="_blank"><span class="bar"></span><img src="./icons/motox3m-pool.webp"><b>Motox3m Pool Party</b></a>
-            <a id="motox3m Spooky Land" class="link" href="./play/motox3m-spooky/" target="_blank"><span class="bar"></span><img src="./icons/moto-spook.webp"><b>Motox3m Spooky Land</b></a>
-            <a id="motox3m Winter" class="link" href="./play/motox3m-winter/" target="_blank"><span class="bar"></span><img src="./icons/motox3m-winter.webp"><b>Motox3m Winter</b></a>
-            <a id="motox3m2" class="link" href="./play/motox3m2/" target="_blank"><span class="bar"></span><img src="./icons/motox3m2.webp"><b>Motox3m2</b></a>
-            <a id="Multiplayer Pong" class="link two" href="./play/multiplayer-pong/" target="_blank"><span class="bar"></span><img src="./icons/pong.webp"><b>Multiplayer Pong</b><span class="badge"><i class="fa-solid fa-user"></i> 2 Player</span></a>
-            <a id="Pacman" class="link" href="./play/pacman/" target="_blank"><span class="bar"></span><img src="./icons/pacman.webp"><b>Pacman</b></a>
-            <a id="Paper.io 2" class="link" href="./play/paperio/" target="_blank"><span class="bar"></span><img src="./icons/paperio.webp"><b>Paper.io 2</b></a>
-            <a id="Papery Planes" class="link" href="./play/papery-planes/" target="_blank"><span class="bar"></span><img src="./icons/paperplane.webp"><b>Papery Planes</b></a>
-            <a id="Particle Clicker" class="link" href="./play/particle-clicker/" target="_blank"><span class="bar"></span><img src="./icons/parclick.webp"><b>Particle Clicker</b></a>
-            <a id="Picky Package" class="link" href="./play/picky-package/" target="_blank"><span class="bar"></span><img src="./icons/pickyback.webp"><b>Picky Package</b></a>
-            <a id="Pokemon Fire Red" class="link" href="./play/pokemonfirered/" target="_blank"><span class="bar"></span><img src="./icons/PokemonFireRed.webp"><b>Pokemon Fire Red</b></a>
-            <a id="Pokey Stick" class="link" href="./play/pokey-stick/" target="_blank"><span class="bar"></span><img src="./icons/pogy.webp"><b>Pokey Stick</b></a>
-            <a id="Pong" class="link" href="./play/pong/" target="_blank"><span class="bar"></span><img src="./icons/pong.webp"><b>Pong</b></a>
-            <a id="PushBack" class="link" href="./play/pushback/" target="_blank"><span class="bar"></span><img src="./icons/pushback.webp"><b>PushBack</b></a>
-          <a id="Browser Quest" class="link" href="./play/browserquest/" target="_blank"><span class="bar"></span><img src="./icons/BrowserQuest.webp"><b>Browser Quest</b></a>
-            <a id="Racer" class="link" href="./play/racer/" target="_blank"><span class="bar"></span><img src="./icons/Racer.webp"><b>Racer</b></a>
-            <a id="Radius Raid" class="link" href="./play/radiusraid/" target="_blank"><span class="bar"></span><img src="./icons/raid.webp"><b>Radius Raid</b></a>
-            <a id="Restaurant Rush" class="link" href="./play/restaurant-rush/" target="_blank"><span class="bar"></span><img src="./icons/resr.webp"><b>Restaurant Rush</b></a>
-            <a id="Retro Bowl" class="link" href="./play/retrobowl/" target="_blank"><span class="bar"></span><img src="./icons/retrobowl.webp"><b>Retro Bowl</b></a>
-            <a id="Retro Haunt" class="link" href="./play/retrohaunt/" target="_blank"><span class="bar"></span><img src="./icons/retrohaunt.webp"><b>Retro Haunt</b></a>
-            <a id="Rooftop Snipers 2" class="link" href="./play/rooftop-snipers-2/" target="_blank"><span class="bar"></span><img src="./icons/Rooftop-Snipers.webp"><b>Rooftop Snipers 2</b></a>
-            <a id="Run 3" class="link" href="./play/run3/" target="_blank"><span class="bar"></span><img src="./icons/run3.webp"><b>Run 3</b></a>
-            <a id="Sans" class="link pop" href="./play/sans/" target="_blank"><span class="bar"></span><img src="./icons/sans.webp"><b>Sans</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span></a>
-            <a id="Slope" class="link pop" href="./play/slope/" target="_blank"><span class="bar"></span><img src="./icons/slope.webp"><b>Slope</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span></a>
-            <a id="Simon Says" class="link" href="./play/simon-says/" target="_blank"><span class="bar"></span><img src="./icons/simonsays.webp"><b>Simon Says</b></a>
-            <a id="Snowball.io" class="link" href="./play/snowballio/" target="_blank"><span class="bar"></span><img src="./icons/snowballio.webp"><b>Snowball.io</b></a>
-            <a id="Snow Rider 3D" class="link" href="./play/snowrider3d/" target="_blank"><span class="bar"></span><img src="./icons/snowrider3d.webp"><b>Snow Rider 3D</b></a>
-            <a id="Soccer Girl" class="link" href="./play/soccergirl/" target="_blank"><span class="bar"></span><img src="./icons/soccergirl.webp"><b>Soccer Girl</b></a>
-            <a id="Space Invaders" class="link" href="./play/spaceinvaders/" target="_blank"><span class="bar"></span><img src="./icons/spaceinv.webp"><b>Space Invaders</b></a>
-            <a id="Stack" class="link" href="./play/stack/" target="_blank"><span class="bar"></span><img src="./icons/stack.webp"><b>Stack</b></a>
-            <a id="Stack Ball" class="link" href="./play/stack-ball/" target="_blank"><span class="bar"></span><img src="./icons/stackball.webp"><b>Stack Ball</b></a>
-            <a id="Station Meltdown" class="link" href="./play/station-meltdown/" target="_blank"><span class="bar"></span><img src="./icons/meltdown.webp"><b>Station Meltdown</b></a>
-            <a id="Steal This Election" class="link two" href="./play/steal-this-election/" target="_blank"><span class="bar"></span><img src="./icons/elec.webp"><b>Steal This Election</b><span class="badge"><i class="fa-solid fa-user"></i> 2 Player</span></a>
-            <a id="Subway Surfers: Beijing" class="link" href="./play/subwaysurfersbeijing/" target="_blank"><span class="bar"></span><img src="./icons/subwaysurferbeijing.webp"><b>Subway Surfers: Beijing</b></a>
-            <a id="Subway Surfers: Houston" class="link" href="./play/subwaysurfershouston/" target="_blank"><span class="bar"></span><img src="./icons/subwaysurfershouston.webp"><b>Subway Surfers: Houston</b></a>
-            <a id="Subway Surfers: Monaco" class="link" href="./play/subwaysurfersmonaco/" target="_blank"><span class="bar"></span><img src="./icons/SubwayMonaco.webp"><b>Subway Surfers: Monaco</b></a>
-            <a id="Subway Surfers: San Francisco" class="link pop" href="./play/subwaysurferssanfrancisco/" target="_blank"><span class="bar"></span><img src="./icons/subsan.webp"><b>Subway Surfers: San Francisco</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span></a>
-            <a id="SuperHot" class="link pop" href="./play/superhot/" target="_blank"><span class="bar"></span><img src="./icons/superhot.webp"><b>SuperHot</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span></a>
-            <a id="Sweet Memory Game" class="link pop" href="./play/sweetmemory/" target="_blank"><span class="bar"></span><img src="./icons/sweetmemory.webp"><b>Sweet Memory Game</b>
-            <a id="Temple Run 2" class="link pop" href="./play/temple-run-2/" target="_blank"><span class="bar"></span><img src="./icons/templerun.webp"><b>Temple Run 2</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span></a>
-            <a id="Tetris" class="link" href="./play/tetris/" target="_blank"><span class="bar"></span><img src="./icons/tetris.webp"><b>Tetris</b></a>
-            <a id="The Square" class="link" href="./play/thesquare/" target="_blank"><span class="bar"></span><img src="./icons/thesquare.webp"><b>The Square</b></a>
-            <a id="Tic Tac Toe" class="link" href="./play/tic-tac-toe/" target="_blank"><span class="bar"></span><img src="./icons/toe2.webp"><b>Tic Tac Toe</b></a>
-            <a id="Tic Tac Toe AI" class="link" href="./play/tic-tac-toe-ai/" target="_blank"><span class="bar"></span><img src="./icons/toeai.webp"><b>Tic Tac Toe AI</b></a>
-            <a id="Tiktok" class="link" href="./play/tiktok/" target="_blank"><span class="bar"></span><img src="./icons/tiktok.webp"><b>Tiktok</b></a>
-            <a id="Timeshooter" class="link" href="./play/timeshooter/" target="_blank"><span class="bar"></span><img src="./icons/timeshooters.webp"><b>Timeshooter</b></a>
-            <a id="Tom Run" class="link bad" href="./play/tomrun/" target="_blank"><span class="bar"></span><img src="./icons/tomrun.webp"><b>Tom Run</b><span class="badge"><i class="fa-solid fa-poop"></i> BAD</span></a>
-            <a id="Tower Master" class="link" href="./play/towermaster/" target="_blank"><span class="bar"></span><img src="./icons/towermaster.webp"><b>Tower Master</b></a>
-            <a id="Tunnelrush" class="link" href="./play/tunnelrush/" target="_blank"><span class="bar"></span><img src="./icons/tunnelrush.webp"><b>Tunnelrush</b></a>
-            <a id="TV Static" class="link" href="./play/tv-static/" target="_blank"><span class="bar"></span><img src="./icons/tv-static.webp"><b>TV Static</b></a>
-            <a id="Twerk Race 3D" class="link" href="./play/twerk-race-3d/" target="_blank"><span class="bar"></span><img src="./icons/twerk-race-3d.webp"><b>Twerk Race 3D</b></a>
-            <a id="Twitch Tetris" class="link" href="./play/twitch-tetris/" target="_blank"><span class="bar"></span><img src="./icons/twitch-tetris.webp"><b>Twitch Tetris</b></a>
-            <a id="Tw1tter" class="link" href="./play/tw1tter/" target="_blank"><span class="bar"></span><img src="./icons/twitch-tetris.webp"><b>Tw1tter</b></a>
-            <a id="Tyrone Tetris" class="link" href="./play/tyronetetris/" target="_blank"><span class="bar"></span><img src="./icons/tetris.webp"><b>Tyrone Tetris</b></a>
-            <a id="VELOCE" class="link" href="./play/veloce/" target="_blank"><span class="bar"></span><img src="./icons/VELOCE.webp"><b>VELOCE</b></a>
-            <a id="Vex 3" class="link" href="./play/vex3/" target="_blank"><span class="bar"></span><img src="./icons/vex3.webp"><b>Vex 3</b></a>
-            <a id="Vex 4" class="link" href="./play/vex4/" target="_blank"><span class="bar"></span><img src="./icons/vex4.webp"><b>Vex 4</b></a>
-            <a id="Vex 5" class="link" href="./play/vex5/" target="_blank"><span class="bar"></span><img src="./icons/vex5.webp"><b>Vex 5</b></a>
-            <a id="Vex 6" class="link" href="./play/vex6/" target="_blank"><span class="bar"></span><img src="./icons/vex6.webp"><b>Vex 6</b></a>
-            <a id="Vex 7" class="link" href="./play/vex7/" target="_blank"><span class="bar"></span><img src="./icons/vex7.webp"><b>Vex 7</b></a>
-            <a id="Wall Smash" class="link" href="./play/wallsmash/" target="_blank"><span class="bar"></span><img src="./icons/wallsmash.webp"><b>Wall Smash</b></a>
-            <a id="Waterworks!" class="link" href="./play/waterworks/" target="_blank"><span class="bar"></span><img src="./icons/waterworks.webp"><b>Waterworks!</b></a>
-            <a id="Weave Silk" class="link" href="./play/weavesilk/" target="_blank"><span class="bar"></span><img src="./icons/weavesilk.webp"><b>Weave Silk</b></a>
-            <a id="WebGL Fluid Simulation" class="link" href="./play/webgl-fluid-simulation/" target="_blank"><span class="bar"></span><img src="./icons/webgl-fluid-simulation.webp"><b>WebGL Fluid Simulation</b></a>
-            <a id="Webretro" class="link" href="./play/webretro/" target="_blank"><span class="bar"></span><img src="./icons/webretro.webp"><b>Webretro</b></a>
-            <a id="Whac A Mole" class="link" href="./play/whac-a-mole/" target="_blank"><span class="bar"></span><img src="./icons/Whac-A-Mole.webp"><b>Whac A Mole</b></a>
-            <a id="Wordle" class="link" href="./play/wordle/" target="_blank"><span class="bar"></span><img src="./icons/wordle.webp"><b>Wordle</b></a>
-            <a id="Worlds hardest game" class="link" href="./play/worlds-hardest-game/" target="_blank"><span class="bar"></span><img src="./icons/whg.webp"><b>Worlds hardest game</b></a>
-            <a id="Worlds hardest game 2" class="link" href="./play/worlds-hardest-game-2/" target="_blank"><span class="bar"></span><img src="./icons/whg.webp"><b>Worlds hardest game 2</b></a>
-            <a id="X Trial Racing" class="link" href="./play/x-trial-racing/" target="_blank"><span class="bar"></span><img src="./icons/xtr.webp"><b>X Trial Racing</b></a>
-            <a id="xx142-b2exe" class="link" href="./play/xx142-b2exe/" target="_blank"><span class="bar"></span><img src="./icons/xx142-b2exe.webp"><b>xx142-b2exe</b></a>
-            <a id="Y0utube" class="link" href="./play/y0utube/" target="_blank"><span class="bar"></span><img src="./icons/youtube.webp"><b>Y0utube</b></a>
-            <a id="Zombs Royale" class="link" href="./play/zombs-royale/" target="_blank"><span class="bar"></span><img src="./icons/zombs-royale.webp"><b>Zombs Royale</b></a>
-            <a id="Yoshifabrication" class="link" href="./play/yoshifabrication/" target="_blank"><span class="bar"></span><img src="./icons/yoshifabrication.webp"><b>Yoshifabrication</b></a>
-            <p class="game_title">Masked's Game Hub 2.0 is now in the works! You may get an early glance at it right here! https://masked-game-hub.vercel.app/</p>
-            <p class="game_title">Have any suggestions? Please tell us in our <a class="epci" href="https://discord.gg/xksWyP9aJv">discord server</a> or email us at requests@odd.gay in our <a class="epci" href="https://discord.gg/xksWyP9aJv">discord server</a> we also have many more links! So join in case this one gets blocked by your school!</p>
-        </div>
-
-        <script>
-            function search_it() {
-                var tag = document.getElementById("tags").value
-                var what_search = document.getElementById("search").value
-                var pop_list = document.querySelectorAll(".pop")
-                var two_list = document.querySelectorAll(".two")
-                if(what_search === "" && tag == "all"){
-                    for(var i=0;i<game_list.length;i++){
-                        document.getElementById(game_list[i].id).style.display = "flex"
-                    }
-                    for(var i=0;i<good_games.length;i++){
-                        document.getElementById(good_games[i].id).style.display = "flex"
-                    }
-                }else{
-                    var active_list = document.querySelectorAll(".active")
-                    for(var i=0;i<active_list.length;i++){
-                        document.getElementById(active_list[i].id).classList.remove("active")
-                    }
-                    for(var i=0;i<game_list.length;i++){
-                        document.getElementById(game_list[i].id).style.display = "none"
-                    }
-                    for(var i=0;i<good_games.length;i++){
-                        document.getElementById(good_games[i].id).style.display = "none"
-                    }
-                    for(var i=0;i<game_list.length;i++){
-                        item = game_list[i].id.toLowerCase()
-                        item2 = document.getElementById(game_list[i].id)
-                        if(item.includes(what_search.toLowerCase())){
-                            if(tag == "pop" && item2.classList.contains("pop")){
-                                document.getElementById(game_list[i].id).classList.add("active")
-                            }
-                            else if(tag == "two" && item2.classList.contains("two")){
-                                document.getElementById(game_list[i].id).classList.add("active")
-                            }
-                            else if(tag == "stream" && item2.classList.contains("stream")){
-                                document.getElementById(game_list[i].id).classList.add("active")
-                            }
-                            else if(tag == "bad" && item2.classList.contains("bad")){
-                                document.getElementById(game_list[i].id).classList.add("active")
-                            }
-                            else if(tag == "all"){
-                                document.getElementById(game_list[i].id).classList.add("active")
-                            }
-                            }
-                        }
-                }}
-            var game_list = document.querySelectorAll(".link");
-            var good_games = document.querySelectorAll(".glink");
-            search_enter = document.getElementById("search");
-            search_enter.addEventListener("keyup",(event) => {
-                if(event.key === "Enter"){
-                    search_it();
-                }
-            })
-
-        </script>
-    </body>
-</html>
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scroll To Top With Scroll Progress</title>
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="progress">
-      <span id="progress-value">&#x1F815;</span>
+    <head>
+        <script async src="https://arc.io/widget.min.js#AhhMHcMM"></script>
+        <title>Masked's Game Hub 2.0</title>
+        <!-- Primary Meta Tags -->
+        <meta name="title" content="Bigfoot's Game Shack">
+        <meta name="description" content="Bigfoot's Game Shack | Built for Chromebook Gamers">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://bgs.pages.dev">
+        <meta property="og:title" content="Bigfoot's Game Shack">
+        <meta property="og:description" content="Bigfoot's Game Shack | Built for Chromebook Gamers">
+        <meta property="og:image" content="images/1-dark.png">
+        <link rel="manifest" href="manifest.json"/>
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://bgs.pages.dev">
+        <meta property="twitter:title" content="Bigfoot's Game Shack">
+        <meta property="twitter:description" content="Masked's Game Hub 2.0 | It's time to game.">
+        <meta property="twitter:image" content="/images/1-dark.png">
+        <meta name="google-site-verification" content="17dinb5b-QEZz8CfKEUNy_eM_P2ebyM-cYBDVUsCQMM" />
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="manifest" href="manifest.webmanifest" />
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7257238324060789" crossorigin="anonymous"></script>
+        <!--<script src="scripts/alert.js"></script>-->
+        <script src="scripts/textanim.js"></script>
+        <script src="scripts/hide.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/panic.js"></script>
+        <script src="scripts/tab.js"></script>
+        <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P6V3QXEWMB"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-P6V3QXEWMB');
+        </script>
+        <!-- Google tag (gtag.js)(feetbig.pages.dev) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKZB20RKXK"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-VKZB20RKXK');
+        </script>
+        <!-- Google tag (bigfootshack.pages.dev)(gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SF3YJ26PBZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SF3YJ26PBZ');
+</script>
+<script type="text/javascript">
+    (function() {
+        window.sib = {
+            equeue: [],
+            client_key: "ux20cgvma6q43vik1tkevtax"
+        };
+        /* OPTIONAL: email for identify request*/
+        // window.sib.email_id = 'example@domain.com';
+        window.sendinblue = {};
+        for (var j = ['track', 'identify', 'trackLink', 'page'], i = 0; i < j.length; i++) {
+        (function(k) {
+            window.sendinblue[k] = function() {
+                var arg = Array.prototype.slice.call(arguments);
+                (window.sib[k] || function() {
+                        var t = {};
+                        t[k] = arg;
+                        window.sib.equeue.push(t);
+                    })(arg[0], arg[1], arg[2]);
+                };
+            })(j[i]);
+        }
+        var n = document.createElement("script"),
+            i = document.getElementsByTagName("script")[0];
+            n.type = "text/javascript", n.id = "sendinblue-js",
+            n.async = !0, n.src = "https://sibautomation.com/sa.js?key="+ window.sib.client_key,
+            i.parentNode.insertBefore(n, i), window.sendinblue.page();
+    })();
+    </script>
+    </head>
+
+    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+        new Crate({
+            server: '829117322223812658', // Bigfoot's Game Shack
+            channel: '1035597205354057789' // #school
+        })
+    </script>
+
+    <body id="body" >
+        <!--<div id="vfourpromo"class="v4-promo"><iframe id="vfourpromo" class="v4-promo-video" width="560" height="315" src="https://www.youtube.com/embed/RUF8DhMRSnw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><h2>Bigfoot's Game Shack Swag has arrived</h2><p3>Buy shirts, stickers, and much more</p3><br/><a href="https://my-store-deaa97.creator-spring.com/"><button class="v4-promo-button">Go to Store</button></a><br/><button onClick="v4();"class="v4-promo-button">Continue to website</button></div></div>-->
+        <iframe class="heyyyyyy" style="overflow-x: hidden;overflow-y: hidden;height: 100vh;" src="g/panic-screens/panic.html" id="iframe"></iframe>
+        <iframe class="heyyyyyy1" style="overflow-x: hidden;overflow-y: hidden;height: 100vh;" src="g/panic-screens/panic5.html" id="iframe1"></iframe>
+
+        <div class="page" id="maincode">
+
+            <div class="row navbarfoixed">
+                <div style="z-index:5;">
+                    <div class="one">
+                        <section style="text-align: center;">
+                            <!-- <div  class="span2 logonav floatleft"><a href="#"><img style="width:auto;height: 70px;margin-right:-60px;position: absolute;top: 7px;left: 54px;" src="images/bgs-text-modern-dark.png" /></a></div>-->
+                            <div style="padding-bottom: 0px;margin-left:30px;padding-top: 20px;" class="span2 logonav floatleft imagetext">
+                                <a href="#">
+                                    <img style="width:auto;height: 90px;margin-right:-60px;position: absolute;top: 7px;left: 54px;" src="images/logonew.png" />
+                                </a>
+                            </div>
+              
+                            <div style="margin-left:1px;padding-top: 15px;min-width: 140px; text-decoration: none;" class="span2 navlink floatright">
+                                <span>
+                                    <a class="active" href="g/index.html">
+                                        <div class="text" data-text="effect">
+                                            <h1 class="newanim">Games</h1>
+                                        </div>
+                                    </a>
+                                </span>
+                            </div>
+                            <div style="margin-left:px;padding-top: 15px;min-width: 140px; text-decoration: none;" class="span2 navlink ">
+                                <span>
+                                    <div class="text" data-text="effect">
+<!--                                         make it so the text is also a link back to home -->
+                                        <a class="active" href="#">
+                                        <h1 style="color: white;padding: 17px;letter-spacing: 3px;">BIGFOOT'S GAME SHACK</h1>
+                                            </a>
+                                    </div>
+                                </span>
+                            </div>
+                           
+                            <div style="margin-left:1px;padding-top: 15px;min-width: 140px; text-decoration: none;" class="span2 navlink floatright">
+                                <span>
+                                    <a class="active" href="about-us/info.html">
+                                        <div class="text" data-text="effect">
+                                            <h1 class="newanim">Info</h1>
+                                        </div>
+                                    </a>
+                                </span>
+                            </div>
+                                           <div style="margin-left:1px;padding-top: 15px;min-width: 140px; text-decoration: none;" class="span2 navlink floatright">
+                                <span>
+                                    <a class="active" href="index.html">
+                                        <div class="text" data-text="effect">
+                                            <h1 class="current">Home</h1>
+                                        </div>
+                                    </a>
+                                </span>
+                            </div>
+                            <!--Copy from here down to end Settings code for settings popup-->
+                            <!--
+                                   <div style="margin-left:1px;padding-top: 15px;min-width: 140px; text-decoration: none;"class="span2 navlink floatright"><span><a href="javascript:void(0);" onclick="opensettings();" class="active"><div class="text" data-text="effect"><h1 class="newanim">Settings</h1></div></a></span></div>
+-->             
+                    </div>
+                </div>
+            </div>
+            <!--End nav-->
+            <div class="forsmallscreens">
+                <iframe class="iframemain" src="g/mobileembed.html" title="Welcome to Bigfoot's Game Shack"></iframe>
+            </div>
+            <div class="belownavbar">
+                <!--Start Settings code-->
+                <div class="console">
+                    <div>
+                        <div id="opensettingsid" class="notsettingspagesettings">
+                            <h1>SETTINGS</h1>
+                            <div class="consolebody">
+                                <p>
+                                    <span id="console-output"></span>
+                                </p>
+                                <p class="console-input">
+                                    <input id="userinput" type="url" pattern="https://.*" placeholder="Enter a title or image URL" autocomplete="on" autofocus />
+                                </p>
+                            </div>
+                            <div class="button-wrapper">
+                                <button style="padding: 0px;margin-bottom:10px;background-color: rgb(58, 39, 12);height:50px;width:100px;color:white;" onclick="blank();">Open Tab in about:blank</button>
+                                <button style="padding: 0px;margin-bottom:10px;background-color: rgb(58, 39, 12);height:50px;width:75px;color:white;" onclick="changeTabTitle();" class="console-button">Set Title</button>
+                                <button style="padding: 0px;margin-bottom:10px;background-color: rgb(58, 39, 12);height:50px;width:75px;color:white;" onclick="changeTabIcon();" class="console-button">Set Icon</button>
+                                <button style="margin-bottom:10px;padding: 0px;background-color: rgb(58, 39, 12);height:50px;width:75px;color:white;" onclick="resetTabSettings();" class="console-button">Reset</button>
+                            </div>
+                            <div class="examples">
+                                <p>
+                                    <b>Google Search: </b>
+                                    <button style="padding: 0px;background-color: rgb(58, 39, 12);height:20px;width:75px;color:white;" onclick="applyUrl('https://storage.googleapis.com/operating-anagram-8280/favicon-32x32.png', 'Math pratice - Google Search');">Apply</button>
+                                </p>
+                                <p>
+                                    <b>Google Classroom: </b>
+                                    <button style="padding: 0px;background-color: rgb(58, 39, 12);height:20px;width:75px;color:white;" onclick="applyUrl('https://ssl.gstatic.com/classroom/favicon.png', 'Classes');">Apply</button>
+                                </p>
+                                <p>
+                                    <b>Google Docs: </b>
+                                    <button style="padding: 0px;background-color: rgb(58, 39, 12);height:20px;width:75px;color:white;" onclick="applyUrl('https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico', 'Class notes - Google Docs');">Apply</button>
+                                </p>
+                                <p>
+                                    <b>Google Drive: </b>
+                                    <button style="padding: 0px;background-color: rgb(58, 39, 12);height:20px;width:75px;color:white;" onclick="applyUrl('https://ssl.gstatic.com/images/branding/product/2x/hh_drive_36dp.png', 'My Drive - Google Drive');">Apply</button>
+                                </p>
+                                <p>
+                                    <b>Canvas: </b>
+                                    <button style="padding: 0px;background-color: rgb(58, 39, 12);height:20px;width:75px;color:white;" onclick="applyUrl('https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico' , 'Dashboard');">Apply</button>
+                                </p>
+                                <p>
+                                    <b>Schoology: </b>
+                                    <button style="padding: 0px;background-color: rgb(58, 39, 12);height:20px;width:75px;color:white;" onclick="applyUrl('https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico', 'Home | Schoology');">Apply</button>
+                                </p>
+                                <p>
+                                    <b>my NG connect: </b>
+                                    <button style="padding: 0px;background-color: rgb(58, 39, 12);height:20px;width:75px;color:white;" onclick="applyUrl('https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.myngconnect.com/login/chooseMainUI.spr&size=16', 'my NG connect');">Apply</button>
+                                    <a onclick="opensettings();">
+                                        <div>
+                                            <p2 style="cursor: pointer;">Close Settings</p2>
+                                        </div>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="scripts/settings.js"></script>
+                <!--aka main.js-->
+                <script src="scripts/tab.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script src="scripts/opensettingstab.js"></script>
+                <script src="scripts/alert.js"></script>
+            </div>
+            <!--end Settings code-->
+
+
+
+
+
+            <div class="contentbelownav">
+                <!--<div id="new-yt"class="new-yt"><h2>SUBSCRIBE TO OUR NEW YOUTUBE CHANNEL</h2><a class="a-link-yt" style="text-decoration: none;" href="./yt.html"><div class="sub-yt-button"><h1 class="h1-subscribe">SUBSCRIBE</p1></div></a>
+                <img class="yt-image"src="images/yt-subscribe.jpg">
+                <img class="yt-image2"src="images/logonew.png">
+
+                </div>-->
+
+                
+                <!--<div class="alert" style="text-align: center;"> Thanks for 100k! </div>-->
+                <img style="background-image:url(images/1-dark-nologo.png); background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;width: 100vw; max-width:100vw;background-position-y: 00px;" src="images/wave1-2.png" alt="background">
+                <!---->
+                <div class="main">
+                    <section>
+                        <div class="twoarrow" style="background-color: rgb(255, 255, 255);">
+                            <img style="margin-top: -10px;height: auto; width: 100vw; max-width:100vw;" src="images/2.png"></img>
+                        </div>
+                </div>
+                </section>
+                <!---->
+                <div class="main">
+                    <section>
+                        <div class="threearrow" style="background-image:url(images/3.png); background-size: cover;">
+                            <div style="background-position: center;width:100%;    text-align: center; height:1080px; position:relative;z-index:5; z-index:5; ">
+                                <!-- <a style="color: white;"href="https://dsc.gg/bigfoot"><img style="height: 400px;z-index: 0; " class="lazy" data-src="images/bigfoot.png"></img><img style="padding-bottom: 101px;max-height:300px" class="lazy" data-src="images/discordlogo.png"></img></a>-->
+                                <h1 class="discord-ad-main">Join our Discord!</h1>
+                                <br>
+                                <div style="width:70vw">
+                                    <h3 class="discord-ad-below" style="text-align: left;">Bigfoot's Game Shack has a popular Discord server with over 500 members dedicated to gaming and all things related. The server offers a friendly and welcoming community of gamers who enjoy playing a wide variety of games, including multiplayer, co-op, and single-player games. Members can connect with each other, find teammates, and engage in lively discussions about their favorite games. The server also features events, giveaways, and tournaments, making it an exciting and interactive place for gamers of all skill levels. Join Bigfoot's Game Shack today and immerse yourself in the world of gaming with a fun and supportive community!<br>
+                                    </h3>
+                                    <a class="link-a" href="https://discord.gg/JYQ4n8DBKM">
+                                        <div class="button-but-a-link">
+                                            <p4 class="notabutton">Join our Discord</p4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--JOIN OUR DISCORD ANIMATION?-->
+                    </section>
+                </div>
+                <div class="main">
+                    <!--https://opengraph.githubassets.com/2e4215a69ddf4fa111342c8d4d377be767b5cf243a7cf9c5a4a5b204d7050e6e/bigfootsgs/bigfootsgs.github.io-->
+                    <section>
+                        <div style="background-repeat: no-repeat; margin-top: -165px;background-image: url(images/4.png);background-position: center;width:100%;background-size: cover;text-align: center; height:1060px; position:relative;z-index:5;">
+                            <!--
+                        <button onclick="window.location.href='https://vercel.com/new/clone?repository-url=https://github.com/BigfootsGS/BigfootsGS.github.io'" style="transition: .5s;text-align: center;margin-top: 600px;"><img src="images/vercel.svg"/></button><button onclick="window.location.href='https://app.netlify.com/start/deploy?repository=https://github.com/BigfootsGS/BigfootsGS.github.io'" style="transition: .5s;text-align: center;margin-top: 600px;"><img src="images/netlify.svg"/></button><button onclick="window.location.href='https://heroku.com/deploy/?template=https://github.com/BigfootsGS/BigfootsGS.github.io'" style="transition: .5s;text-align: center;margin-top: 600px;"><img src="images/heroku.svg"/></button>-->
+                           <div style="box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.384);">
+                                <div class="tab1">
+                                    <button class="tablinks1" onclick="openCity(event, 'London')" id="defaultOpen">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+                                        </svg> Discord </button>
+                                    <button class="tablinks1" onclick="openCity(event, 'Paris')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                        </svg> Github </button>
+                                    <button class="tablinks1" onclick="openCity(event, 'Tokyo')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                        </svg> Twitter </button>
+                                    <button class="tablinks1" onclick="openCity(event, 'Tokyo1')">
+                                        <object data="/images/yt-svg.svg" width="20" height="20"> </object>
+                                        YouTube </button>
+                                    <button class="tablinks1" onclick="openCity(event, 'Tokyo3')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                            <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                                            <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                                        </svg> Affiliates </button>
+                                </div>
+                                <div id="London" class="tabcontent1 githubback">
+                                    <h1 style="padding-top: 10px;text-align: left;margin-bottom: 10px;">Join 500+ gamers on our growing Discord Server!</h1>
+                                    <br>
+                                    <svg style="float:left;margin-bottom:10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                        <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+                                    </svg>
+                                    <p1 style="text-align: left;padding-left: -53px;float: left;">Talk with the community, get the latest updates, participate in events, and more!</p1>
+                                    <a class="link-a1" href="https://discord.gg/wQpUueacTZ">
+                                        <div class="button-but-a-link1">
+                                            <p4 class="notabutton1">Learn More!</p4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="Paris" class="tabcontent1 githubback">
+                                    <h1 style="padding-top: 10px;text-align: left;">Fork us on Github </h1>
+                                    <br>
+                                    <p1 style="text-align: left;padding-left: -53px;float: left;">Download our source code, or run BGS on your own link/website! Deploy our website to services like netlify and vercel, so you can stay unblocked!</p1>
+                                    <br>
+                                    <a class="link-a1" href="https://github.com/BigfootsGS/BigfootsGS.github.io/fork">
+                                        <div class="button-but-a-link1">
+                                            <p4 class="notabutton1">Learn More...</p4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="Tokyo" class="tabcontent1 githubback">
+                                    <h1 style="padding-top: 10px;text-align: left;">Follow us on Twitter</h1>
+                                    <br>
+                                    <svg style="float:left; margin-bottom:10px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                    </svg>
+                                    <p1 style="text-align: left;padding-left: -53px;float: left;">Get the scoop on our latest updates, and get sneak previews of new snapshots!</p1>
+                                    <br>
+                                    <a class="link-a1" href="https://twitter.com/Bigfoot99991">
+                                        <div class="button-but-a-link1">
+                                            <p4 class="notabutton1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                                </svg> Follow us
+                                            </p4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="Tokyo1" class="tabcontent1 githubback">
+                                    <h1 style="padding-top: 10px;text-align: left;">Subscribe to our YT Channel</h1>
+                                    <br><object style="float: left;"data="/images/yt-svg.svg" width="20" height="20"> </object>
+
+                                    <p1 style="text-align: left;padding-left: -53px;float: left;padding-top: 10px;">We post videos every week about Bigfoot's Game Shack. Learn how to make your own links for BGS, use our game library, and more. </p1>
+                                    <a class="link-a1" href="yt.html">
+                                        <div class="button-but-a-link1">
+                                            <p4 class="notabutton1">
+                                                Learn More!
+                                            </p4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="Tokyo3" class="tabcontent1 partner-background">
+                                    <h1 style="padding-top: 10px;text-align: left;color: white;">Kardna Network</h1><br>
+                                    <p1 style="text-align: left;padding-left: -53px;float: left;padding-top: 10px;">Bigfoot's Game Shack is powered by Kardna Servers. Join their community server to learn more.</p1>
+                                    <a class="link-a1" href="https://discord.gg/3YzKEj2Cw8">
+                                        <div class="button-but-a-link1">
+                                            <p4 class="notabutton1">
+                                              Learn More!
+                                            </p4>
+                                        </div>
+                                    </a>
+                                </div>                        </div>
+
+                                <script>
+                                    function openCity(evt, cityName) {
+                                        var i, tabcontent, tablinks;
+                                        tabcontent = document.getElementsByClassName("tabcontent1");
+                                        for (i = 0; i < tabcontent.length; i++) {
+                                            tabcontent[i].style.display = "none";
+                                        }
+                                        tablinks = document.getElementsByClassName("tablinks1");
+                                        for (i = 0; i < tablinks.length; i++) {
+                                            tablinks[i].className = tablinks[i].className.replace(" active", "");
+                                        }
+                                        document.getElementById(cityName).style.display = "block";
+                                        evt.currentTarget.className += " active";
+                                    }
+                                    // Get the element with id="defaultOpen" and click on it
+                                    document.getElementById("defaultOpen").click();
+                                </script>
+                </div></div>
+                </section>
+                <div class="main">
+                    <section style="margin-bottom:131px;height: 600px;">
+                        <div style="height: inherit;width:100%; max-height:1380px;height:100%; position:absolute;z-index:5;">
+                            <div class="threearrow">
+                                <div style="margin-top: -199px;height: inherit;width:100%; position:absolute;z-index:5;">
+                                    <div style="background-image:url(images/1-dark-nologo.png); 
+                                padding-bottom: 78px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;width: 100vw; max-width:100vw;" class="row partners">
+                                        <img style="margin-top: -86px;z-index: 1;" class="lazy" data-src="images/waveHD.png" alt="background">
+                                        <div class="partners">
+                                            <div class="wrapper">
+                                                <div class="span4">
+                                                    <div class="profile">
+                                                        <img src="images/uu.gif" class="thumbnail">
+                                                        <h3 class="name">UNBLOCKERS UNITED</h3>
+                                                        <p class="title">Discord Server</p>
+                                                        <p class="description">
+                                                            <span class="highlight">Unblockers United is a Discord server for programmers & Discord staff from some of the most prestigious websites.</span>
+                                                        </p>
+                                                        <button onclick="window.location.href='https://discord.gg/JaS7z3FxkZ'" type="button" class="btn">Learn More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wrapper">
+                                                <div class="span4">
+                                                    <div class="profile">
+                                                        <img src="images/interstellar.png" class="thumbnail" style="background-color: black;">
+                                                        <h3 class="name">INTERSTELLAR NETWORK</h3>
+                                                        <p class="title">Discord Server x Website</p>
+                                                        <p class="description">
+                                                            <span class="highlight">Custom bots, Active staff, games, apps, 7000+ member Discord Server, and More!</span>
+                                                        </p>
+                                                        <button onclick="window.location.href='https://dsc.gg/interstellarnetwork'" type="button" class="btn">Learn More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       
+                                                                                        <div class="wrapper">
+                                                <div class="span4">
+                                                    <div class="profile">
+                                                        <img src="images/kas-logo.png"  class="thumbnail">
+                                                        <h3 class="name">KAZWIRE</h3>
+                                                        <p class="title">Discord Server x Website</p>
+                                                        <p class="description">
+                                                            <span class="highlight">From the gaming classics to the internet, access YouTube, TikTok, and even your favorite games freely and securely.</span>
+                                                        </p>
+                                                        <button onclick="window.location.href='https://discord.gg/kazwire'" type="button" class="btn">Learn More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wrapper">
+                                                <div class="span4">
+                                                    <div class="profile">
+                                                        <img src="images/totallyscience.png" class="thumbnail science">
+                                                        <h3 class="name">TOTALLY SCIENCE</h3>
+                                                        <p class="title">Website x Discord Server</p>
+                                                        <p class="description">
+                                                            <span class="highlight"> Your one-stop destination for free online games and unblocked content! Youtube, multiplayer games, Minecraft, and more.</span>
+                                                        </p>
+                                                        <button onclick="window.location.href='https://totallyscience.co/'" type="button" class="btn">Learn More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  
+                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"><h3 style="float: none;padding-bottom: 400px;"class="slidertext">Featured YT videos</h3><div id="slider"><ul id="slideWrap"><a href="https://youtu.be/1bZP4RLkcFg"><li><img src="images/yt-thumb-vortex.jpg" alt=""><br><img class="ytlogo"src="images/yt-circle.png" alt="Featured Youtube Video"><h2 class="slidertext">Made by @vortexzzz2934</h2></li></a><a href="https://www.youtube.com/shorts/Uepz8GH50cA"><li><img src="https://i.ytimg.com/vi/Uepz8GH50cA/mqdefault.jpg" alt=""><br><h2 class="slidertext">Made by @Czechoslovakia-</h2><img class="ytlogo" src="images/yt-circle.png" alt="Featured Youtube Video"></li></a><a href="https://forms.gle/oMtWLYXfGNMpcLST6"><li><img src="images/featured-yt.png" alt=""><br><h2 class="slidertext-center">This could be you!</h2></li></a></ul><a id="prev" >&#8810;</a><a id="next" >&#8811;</a></div>
+                                  
+                                -->
+                                        <script>
+                                            var responsiveSlider = function() {
+                                                var slider = document.getElementById("slider");
+                                                var sliderWidth = slider.offsetWidth;
+                                                var slideList = document.getElementById("slideWrap");
+                                                var count = 1;
+                                                var items = slideList.querySelectorAll("li").length;
+                                                var prev = document.getElementById("prev");
+                                                var next = document.getElementById("next");
+                                                window.addEventListener('resize', function() {
+                                                    sliderWidth = slider.offsetWidth;
+                                                });
+                                                var prevSlide = function() {
+                                                    if (count > 1) {
+                                                        count = count - 2;
+                                                        slideList.style.left = "-" + count * sliderWidth + "px";
+                                                        count++;
+                                                    } else if (count = 1) {
+                                                        count = items - 1;
+                                                        slideList.style.left = "-" + count * sliderWidth + "px";
+                                                        count++;
+                                                    }
+                                                };
+                                                var nextSlide = function() {
+                                                    if (count < items) {
+                                                        slideList.style.left = "-" + count * sliderWidth + "px";
+                                                        count++;
+                                                    } else if (count = items) {
+                                                        slideList.style.left = "0px";
+                                                        count = 1;
+                                                    }
+                                                };
+                                                next.addEventListener("click", function() {
+                                                    nextSlide();
+                                                });
+                                                prev.addEventListener("click", function() {
+                                                    prevSlide();
+                                                });
+                                                setInterval(function() {
+                                                    nextSlide()
+                                                }, 5000);
+                                            };
+                                            window.onload = function() {
+                                                responsiveSlider();
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </section>
+            </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var lazyloadImages = document.querySelectorAll("img.lazy");
+                var lazyloadThrottleTimeout;
+
+                function lazyload() {
+                    if (lazyloadThrottleTimeout) {
+                        clearTimeout(lazyloadThrottleTimeout);
+                    }
+                    lazyloadThrottleTimeout = setTimeout(function() {
+                        var scrollTop = window.pageYOffset;
+                        lazyloadImages.forEach(function(img) {
+                            if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazy');
+                            }
+                        });
+                        if (lazyloadImages.length == 0) {
+                            document.removeEventListener("scroll", lazyload);
+                            window.removeEventListener("resize", lazyload);
+                            window.removeEventListener("orientationChange", lazyload);
+                        }
+                    }, 20);
+                }
+                document.addEventListener("scroll", lazyload);
+                window.addEventListener("resize", lazyload);
+                window.addEventListener("orientationChange", lazyload);
+            });
+
+
+            
+        </script>
+        <!--Footer-->
+        <div class="footer">
+            <!--margin-top: 294px; is so the footer is fixed on wide screens-->
+            <div class="row footermargin">
+                <div class="span4">
+                    <a href="#">
+                        <img class="center" src="images/bgslogo.png" alt="BGS LOGO" style="border-radius: 0px;max-height: 500px;max-width: 275px;padding-top:40px;">
+                    </a>
+                </div>
+                <div class="span4">
+                    <h2 style="padding-left: 22px;padding-top: 30px;">Resources</h2>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="g/bgs.html">Games</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="g/index.html#buttonDiv7">Apps</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="about-us/info.html">Info</a>
+                    </h4>
+                </div>
+                <div class="span4">
+                    <h2 style="padding-left: 22px;padding-top: 30px;">Links</h2>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://forms.gle/yA8YUy2bTL1aaEiR7">Request Games</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://dsc.gg/bigfoot">Discord Server</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://github.com/bigfoot99999">Github</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://twitter.com/Bigfoot99991">Twitter</a>
+                    </h4>
+                </div>
+                <div class="span4">
+                    <h2 style="padding-left: 22px;padding-top: 30px;">Contact</h2>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="mailto:bigfoot.gaming9999@gmail.com">bigfoot.gaming9999@gmail.com</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">Bigfoot#9033</h4>
+                </div>
+                <div class="span4">
+                    <h2 style="padding-left: 22px;padding-top: 30px;">Afliates</h2>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://stars.gq">Interstellar Network</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://www.shock.gq">Impact Network</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://discord.gg/JaS7z3FxkZ">Unblockers United</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://www.integrity-network.ga">Integrity Network</a>
+                    </h4>
+                </div>
+                <div class="span4">
+                    <h2 style="padding-left: 22px;padding-top: 30px;">Previous Versions</h2>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://www.bigfootshack.gq/BGS">v2 (Google Site)</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://sites.google.com/view/bigfoots-game-shack/home">v1.1.1 (Google Site)</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://sites.google.com/view/bigfootsgameshack/home">v1 (Google Site, Dev)</a>
+                    </h4>
+                    <h4 style="padding-left: 22px;padding-top: 5px;">
+                        <a href="https://sites.google.com/view/bigfoot9999/home">v1 (Google Site)</a>
+                    </h4>
+                </div>
+            </div>
+            <br>
+            <div class="footerlinks">
+                <div style="    font-size: 30px;text-align: center;">
+                    <a href="https://discord.gg/JYQ4n8DBKM">
+                        <i class="ri-discord-line"></i>
+                    </a>
+                    <a href="https://github.com/bigfoot9999">
+                        <i class="ri-github-line"></i>
+                    </a>
+                    <a href="https://twitter.com/Bigfoot99991">
+                        <i class="ri-twitter-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--END FOOTER-->
     </div>
-         <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+    
+
+    </body>
+
 </html>
