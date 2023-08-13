@@ -20,11 +20,25 @@
 <html>
 <head>
 <style>
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.button-container {
+  text-align: center;
+}
+
 .image-button {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  text-align: center; /* Align text horizontally */
+  text-align: center;
+  margin: 10px;
 }
 
 .image-button img {
@@ -45,9 +59,9 @@
 
 .button-text {
   position: absolute;
-  top: 50%; /* Position the text vertically at 50% from the top */
-  left: 50%; /* Position the text horizontally at 50% from the left */
-  transform: translate(-50%, -50%); /* Center the text */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
   background-color: rgba(0, 0, 0, 0.7);
@@ -60,24 +74,20 @@
 </head>
 <body>
 
-<a href="./play/2048">
-  <div class="image-button">
-    <img src="./play/icons/2048.webp" alt="Button Image">
-    <div class="button-text">2048</div>
-  </div>
-</a>
-<a href="./play/flappybird">
-  <div class="image-button">
-    <img src="./play/icons/flappybird.webp" alt="Button Image">
-    <div class="button-text">FlappyBird</div>
-  </div>
-</a>
-<a href="./play/minecraft">
-  <div class="image-button">
-    <img src="./play/icons/minecraft.webp" alt="Button Image">
-    <div class="button-text">Minecraft Javascript Edition</div>
-  </div>
-</a>
-    
+<div class="button-container">
+  <a href="./minecraft" class="image-button">
+    <img src="./icons/minecraft.webp" alt="Button Image">
+    <div class="button-text">Click Me</div>
+  </a>
+  
+  <a href="https://www.example2.com" class="image-button">
+    <img src="your-image-url2.jpg" alt="Button Image">
+    <div class="button-text">Click Me</div>
+  </a>
+  
+  <!-- Add more buttons here -->
+
+</div>
+
 </body>
 </html>
