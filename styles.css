@@ -13,7 +13,7 @@ nav {
   width: 70vw;
   min-width: 600px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-around;
   margin: auto;
 }
