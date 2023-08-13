@@ -25,3 +25,50 @@
      <div class="wave"></div>
   </div>
 </body>
+<html>
+<head>
+<style>
+.image-button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-button img {
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.image-button:hover img {
+  transform: scale(1.1);
+  filter: brightness(70%);
+}
+
+.image-button:hover .button-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<div class="image-button">
+  <img src="your-image-url.jpg" alt="Button Image">
+  <div class="button-text">Click Me</div>
+</div>
+
+</body>
+</html>
