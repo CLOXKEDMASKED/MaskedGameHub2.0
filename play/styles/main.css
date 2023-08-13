@@ -53,3 +53,7 @@ button:hover:before {
   background-position: -106.25em 0;
   transition: 10s linear;
 }
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
