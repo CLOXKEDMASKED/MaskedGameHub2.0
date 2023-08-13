@@ -24,7 +24,7 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
-  border-radius: 10px; /* Adjust the value to control the amount of rounding */
+  text-align: center; /* Align text horizontally */
 }
 
 .image-button img {
@@ -45,9 +45,9 @@
 
 .button-text {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%) translateY(20px);
+  top: 50%; /* Position the text vertically at 50% from the top */
+  left: 50%; /* Position the text horizontally at 50% from the left */
+  transform: translate(-50%, -50%); /* Center the text */
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
   background-color: rgba(0, 0, 0, 0.7);
@@ -60,7 +60,7 @@
 </head>
 <body>
 
-<a href="https://www.example.com">
+<a href="./play/2048">
   <div class="image-button">
     <img src="./play/icons/2048.webp" alt="Button Image">
     <div class="button-text">2048</div>
