@@ -50,3 +50,7 @@ a:hover:after,
 a:hover:before {
   width: 100%;
 }
+button#openButton {
+    display: block !important; /* Override the display property */
+    /* Add any other necessary properties to make the button visible */
+}
