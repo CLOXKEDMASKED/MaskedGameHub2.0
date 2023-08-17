@@ -21,6 +21,18 @@
   </body>
 </html>
 <html>
+<body>
+    <button id="openButton">Open Website in Blank Page</button>
+
+    <script>
+        document.getElementById("openButton").addEventListener("click", function() {
+            var newWindow = window.open("about:blank");
+            newWindow.document.write('<iframe src="https://maskedgamehub2-0.pages.dev/" style="width: 100%; height: 100vh; border: none;"></iframe>');
+        });
+    </script>
+</body>
+</html>
+<html>
 <head>
 <style>
 body {
@@ -44,21 +56,5 @@ body {
 
 <img src="./icons/logo2.png" alt="Top Left Image" class="top-left-image">
 
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Open Website in Blank Page</title>
-</head>
-<body>
-    <button id="openButton">Open Website in Blank Page</button>
-
-    <script>
-        document.getElementById("openButton").addEventListener("click", function() {
-            var newWindow = window.open("about:blank");
-            newWindow.document.write('<iframe src="https://maskedgamehub2-0.pages.dev/" style="width: 100%; height: 100vh; border: none;"></iframe>');
-        });
-    </script>
 </body>
 </html>
