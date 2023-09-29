@@ -57,3 +57,7 @@ body {
     margin: auto;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
+.scrollable-container {
+  height: 300px; /* or max-height: 300px; */
+  overflow: auto; /* or overflow: scroll; */
+}
