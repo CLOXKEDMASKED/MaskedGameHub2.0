@@ -68,3 +68,7 @@ body {
 @media (max-width: 480px) {
   /* Styles for screens up to 480px wide (typically smartphones) */
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
