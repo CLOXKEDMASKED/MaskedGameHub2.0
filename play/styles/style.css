@@ -38,3 +38,7 @@ p {
   font-size: 35px;
   color: #001a2e;
 }
+.scrollable-container {
+  height: 300px; /* or max-height: 300px; */
+  overflow: auto; /* or overflow: scroll; */
+}
