@@ -5,9 +5,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #121317;
 }
+
 nav {
   height: 100vh;
   width: 70vw;
@@ -17,6 +19,7 @@ nav {
   justify-content: space-around;
   margin: auto;
 }
+
 a {
   position: relative;
   text-decoration: none;
@@ -26,6 +29,7 @@ a {
   letter-spacing: 0.5px;
   padding: 0 10px;
 }
+
 a:before,
 a:after {
   content: "";
@@ -35,18 +39,61 @@ a:after {
   background-color: #18f08b;
   transition: 0.5s;
 }
+
 a:after {
   left: 0;
   bottom: -10px;
 }
+
 a:before {
   right: 0;
   top: -10px;
 }
+
 a:hover {
   color: #ffffff;
 }
+
 a:hover:after,
 a:hover:before {
   width: 100%;
+}
+
+/* Responsive design for screens up to 768px wide (Tablets) */
+@media (max-width: 768px) {
+  nav {
+    width: 90vw; /* Adjust width for smaller screens */
+    min-width: auto;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text */
+  }
+  a {
+    margin: 10px 0; /* Adjust vertical spacing */
+    padding: 10px 0; /* Adjust padding */
+  }
+  a:before,
+  a:after {
+    width: 100%; /* Full-width underline on hover */
+  }
+}
+
+/* Responsive design for screens up to 480px wide (Smartphones) */
+@media (max-width: 480px) {
+  nav {
+    width: 90vw; /* Adjust width for smaller screens */
+    min-width: auto;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text */
+  }
+  a {
+    margin: 10px 0; /* Adjust vertical spacing */
+    padding: 10px 0; /* Adjust padding */
+    font-size: 16px; /* Reduce font size for smaller screens */
+  }
+  a:before,
+  a:after {
+    width: 100%; /* Full-width underline on hover */
+  }
 }
