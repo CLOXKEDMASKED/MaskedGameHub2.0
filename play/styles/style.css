@@ -4,9 +4,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 p {
   font-size: 3vmin;
   line-height: 2em;
@@ -15,6 +17,7 @@ p {
   margin: 50px 0;
   padding: 0 30px;
 }
+
 #progress {
   position: fixed;
   bottom: 20px;
@@ -27,6 +30,7 @@ p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+
 #progress-value {
   display: block;
   height: calc(100% - 15px);
@@ -38,7 +42,25 @@ p {
   font-size: 35px;
   color: #001a2e;
 }
+
+/* Responsive design for screens up to 768px wide */
+@media (max-width: 768px) {
+  p {
+    font-size: 2.5vmin; /* Adjust font size for smaller screens */
+    padding: 0 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Responsive design for screens up to 480px wide (typically smartphones) */
+@media (max-width: 480px) {
+  p {
+    font-size: 2vmin; /* Adjust font size for even smaller screens */
+    padding: 0 10px; /* Adjust padding for even smaller screens */
+  }
+}
+
+/* Scrollable container styles */
 .scrollable-container {
-  height: 300px; /* or max-height: 300px; */
-  overflow: auto; /* or overflow: scroll; */
+  max-height: 300px; /* Set a maximum height for scrollable container */
+  overflow: auto;
 }
