@@ -1,8 +1,12 @@
+/* Reset default margin and padding */
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
   background-color: #151320;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+/* Your button styles */
 button {
   height: 7.5em;
   width: 18.75em;
@@ -15,6 +19,7 @@ button {
   cursor: pointer;
   border-radius: 0.31em;
 }
+
 button:before {
   content: "";
   height: 100%;
@@ -33,6 +38,7 @@ button:before {
   );
   background-size: 125em;
 }
+
 button:after {
   content: "HOVER ME";
   position: absolute;
@@ -49,25 +55,39 @@ button:after {
   display: grid;
   place-items: center;
 }
+
 button:hover:before {
   background-position: -106.25em 0;
   transition: 10s linear;
 }
-body {
-    margin: auto;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
+
+/* Scrollable container */
 .scrollable-container {
-  height: 300px; /* or max-height: 300px; */
-  overflow: auto; /* or overflow: scroll; */
-}
-@media (max-width: 768px) {
-  /* Styles for screens up to 768px wide */
+  max-height: 300px; /* Set a maximum height for scrollable container */
+  overflow: auto;
 }
 
-@media (max-width: 480px) {
-  /* Styles for screens up to 480px wide (typically smartphones) */
+/* Responsive design for screens up to 768px wide */
+@media (max-width: 768px) {
+  body {
+    /* Adjust styles for screens up to 768px wide */
+  }
+  .button {
+    /* Adjust button styles for smaller screens if needed */
+  }
 }
+
+/* Responsive design for screens up to 480px wide (typically smartphones) */
+@media (max-width: 480px) {
+  body {
+    /* Adjust styles for screens up to 480px wide */
+  }
+  .button {
+    /* Adjust button styles for even smaller screens if needed */
+  }
+}
+
+/* Responsive images */
 img {
   max-width: 100%;
   height: auto;
