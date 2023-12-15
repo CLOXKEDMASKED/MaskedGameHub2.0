@@ -1,0 +1,32 @@
+{
+  "name": "Netquel",
+  "short_name": "Netquel",
+  "description": "Multiplayer space combat game",
+  "categories": [
+    "games"
+  ],
+  "background_color": "#0f0f0f",
+  "theme_color": "#0f0f0f",
+  "display": "standalone",
+  "orientation": "landscape",
+  "id": "/netquel",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/data/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/data/512x340.png",
+      "sizes": "512x340",
+      "type": "image/png"
+    },
+    {
+      "src": "/data/1280x720.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
+  "handle_links": "not-preferred"
+}
