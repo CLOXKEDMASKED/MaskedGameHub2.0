@@ -46,3 +46,64 @@ body {
 
 </body>
 </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for the container */
+        .button-container {
+            text-align: center;
+        }
+
+        /* Style for the image button */
+        .image-button {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        /* Style for the image */
+        .image-button img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Style for the title and description */
+        .button-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Optional: Hover effect */
+        .image-button:hover {
+            border-color: #333;
+        }
+    </style>
+    <title>Image Button with Title and Description</title>
+</head>
+<body>
+
+<div class="button-container">
+    <div class="image-button">
+        <img src="your-image.jpg" alt="Button Image">
+        <div class="button-info">
+            <h3>Title</h3>
+            <p>Description goes here.</p>
+        </div>
+    </div>
+
+    <!-- Add more buttons as needed -->
+</div>
+
+</body>
+</html>
